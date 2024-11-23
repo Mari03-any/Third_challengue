@@ -21,16 +21,11 @@ n : entero
 inicio
   n := 2
   Mientras (n>2) hacer
-    Si modulo(n,2) == 0 entonces
+    Si modulo(2,n) == 0 entonces
       escribir("n no es número primo")
     sino
       escribir("n es número primo")
     n := n + 1
-  Fin mientras
-   Mientras (n=4) hacer
-    Si modulo (n,2) == 0 entonces
-      entonces ("n es número primo¨)
-    n := n + 2
   Fin mientras
 fin
 ```
