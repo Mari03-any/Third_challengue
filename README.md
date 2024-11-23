@@ -7,9 +7,9 @@ Este reto consiste en determinar en una serie de pasos hasta un número n.
 			PASO 1. Crear una lista de números naturales desde 2 hasta n <br>
 			PASO 2. Dividir n sobre 2 <br>
 			PASO 3. Crear una nueva lista con los valores numericos <br>
-				PASO 2.2. Si el residuo de la división es cero, n no es número primo <br>
-				PASO 2.3. Sino, n es número primo <br>
-                                PASO 2.4. El número 2 es una excepción <br>
+				PASO 3.2. Si el residuo de la división es cero, n no es número primo <br>
+				PASO 3.3. Sino, n es número primo <br>
+                                PASO 3.4. El número 2 es una excepción <br>
 			<b>Fin</b><br></p>
 		</th>
 	</tr>
