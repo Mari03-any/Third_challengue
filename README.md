@@ -9,7 +9,7 @@ Este reto consiste en determinar en una serie de pasos hasta un número n.
 			PASO 3. Crear una nueva lista con los valores numericos <br>
 				PASO 2.2. Si el residuo de la división es cero, n no es número primo <br>
 				PASO 2.3. Sino, n es número primo <br>
-        PASO 2.4. El número 2 es una excepción <br>
+                                PASO 2.4. El número 2 es una excepción <br>
 			<b>Fin</b><br></p>
 		</th>
 	</tr>
@@ -25,7 +25,12 @@ inicio
       escribir("n no es número primo")
     sino
       escribir("n es número primo")
-    i := i + 1
+    n := n + 1
+  Fin mientras
+   Mientras (n=4) hacer
+    Si modulo (n,2) == 0 entonces
+      entonces ("n es número primo¨)
+    n := n + 2
   Fin mientras
 fin
 ```
