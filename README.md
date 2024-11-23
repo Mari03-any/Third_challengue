@@ -41,7 +41,7 @@ flowchart TD
     F --> H
     G --> H
     I -- si--> J[No pueden ser irracionales]
-    I --> K[El 2 es números primo]
+    I --> K[El 2 es número primo]
     J --> E
     K --> L
     I --> |no| L(Fin)
