@@ -37,9 +37,11 @@ flowchart TD
     D--> E{Residuo de la division entre es cero?}
     E -->|si| F[i no es primo]
     E -->|no| G[i es primo]
-    H[n:n+1] --> I{n<2?}
+    H[n:n+1] --> I{n≤2?}
     F --> H
     G --> H
     I -- si--> J[Los números primos no pueden ser irracionales]
-    J --> K
-    I --> |no| K(Fin)
+    I --> K[El 2 es una excepción en los números primos]
+    J --> E
+    K --> L
+    I --> |no| L(Fin)
