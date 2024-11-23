@@ -35,8 +35,8 @@ fin
 flowchart TD
     A[Inicio] --> B(numero n) --> c(Lista desde 2 hasta n) --> D(n=2)
     D--> E{Residuo de la division entre es cero?}
-    E -->|si| F[i no es primo]
-    E -->|no| G[i es primo]
+    E -->|si| F[n no es primo]
+    E -->|no| G[n es primo]
     H[n:n+1] --> I{n≤2?}
     F --> H
     G --> H
