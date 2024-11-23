@@ -40,8 +40,8 @@ flowchart TD
     H[n:n+1] --> I{n≤2?}
     F --> H
     G --> H
-    I -- si--> J[Los números primos no pueden ser irracionales]
-    I --> K[El 2 es una excepción en los números primos]
+    I -- si--> J[No pueden ser irracionales]
+    I --> K[El 2 es números primo]
     J --> E
     K --> L
     I --> |no| L(Fin)
