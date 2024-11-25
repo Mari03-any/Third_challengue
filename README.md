@@ -24,7 +24,7 @@ i : entero
 inicio
   i := 2
   n := 2
-  Mientras (i ≤ n + 1) hacer
+  Mientras (i <= n + 1) hacer
     Si modulo(n, i) == 0 entonces
       escribir("n no es número primo")
     sino
