@@ -1,13 +1,14 @@
 # Third_challengue
 ## pdc_unal_Maria_Fernanda_Parra_Osorio
 Este reto consiste en determinar en una serie de pasos hasta un número n.
+Para esto sabemos que los números primos son divisibles por si mismos y 1.
 <tr style="text-align: left; vertical-align: middle;" bgcolor="#">
 		<th>
 			<p align="left"><b>Inicio</b><br>
-			PASO 1. Crear una lista de números naturales desde 2 hasta n <br>
-			PASO 2. Dividir n sobre 2 <br>
-			PASO 3. Crear una nueva lista con los valores numericos <br>
-				PASO 3.2. Si el residuo de la división es cero, n no es número primo <br>
+			PASO 1. Crear una lista de números naturales desde 1 hasta n <br>
+			PASO 2. Repetir con i <br>
+			PASO 3. Dividir i menor que n entre n <br>
+				PASO 3.2. Si el residuo de la división es cero, n no es primo <br>
 				PASO 3.3. Sino, n es número primo <br>
                                 PASO 3.4. El número 2 es una excepción <br>
 			<b>Fin</b><br></p>
@@ -18,14 +19,21 @@ Este reto consiste en determinar en una serie de pasos hasta un número n.
 ```pseudocode
 [variables]
 n : entero
+i : entero
+
 inicio
+  i := 2
   n := 2
-  Mientras (n>2) hacer
-    Si modulo(2,n) == 0 entonces
+  Mientras (i < n + 1) hacer
+    Si modulo(n, i) == 0 entonces
       escribir("n no es número primo")
     sino
-      escribir("n es número primo")
-    n := n + 1
+      Si (i > n/2) entonces  
+        escribir("n es número primo")
+           n:= n + 1
+           i:= 2
+      sino
+         i := i + 1
   Fin mientras
 fin
 ```
@@ -33,15 +41,14 @@ fin
 ### Diagrama de flujo
 ```mermaid
 flowchart TD
-    A[Inicio] --> B(numero n) --> c(Lista desde 2 hasta n) --> D(n=2)
-    D--> E{Residuo de la division entre 2 es cero?}
-    E -->|si| F[n no es primo]
-    E -->|no| G[n es primo]
-    H[n:n+1] --> I{n≤2?}
-    F --> H
-    G --> H
-    I -- si--> J[No pueden ser irracionales]
-    I --> K[El 2 es número primo]
-    J --> E
-    K --> L
-    I --> |no| L(Fin)
+    A[Inicio] --> B(numero n) --> c(Lista desde 1 hasta n) -->D(2 es primo) --> E(n=2) --> F(i=2)
+    F--> G{Residuo de la division es cero?}
+    G -->|si| H[i no es primo]
+    G -->|no| I{i ≥ n/2}
+    I -- si --> K[i es primo]
+    I -- no --> N
+    N[n = n+1]
+    N --> G
+    N --> O{i < n+1} 
+    O -- si --> F
+    O -- no --> L(Fin)
